@@ -341,7 +341,7 @@
                 send me an email.
               </a>
             </p>
-            <form>
+            <form id="contact-form">
               <div class="form-group mt-4">
                 <label for="name" id="name-label">Name</label>
                 <input type="text" class="yc-form-control" id="name" required />
@@ -355,7 +355,7 @@
                   required
                 />
               </div>
-              <div class="form-group mt-4">
+              <div class="form-group mt-4" style="position: relative">
                 <label for="message" id="message-label">Message</label>
                 <div
                   role="textbox"
@@ -366,10 +366,25 @@
                   contenteditable="true"
                   required
                 ></div>
+                <textarea
+                  id="message-hidden-textarea"
+                  style="
+                    position: absolute;
+                    bottom: 1px;
+                    z-index: -1;
+                    opacity: 0.00001;
+                    color: #fff;
+                    pointer-events: none;
+                    resize: none;
+                    height: 0;
+                  "
+                  tabindex="-1"
+                  required
+                ></textarea>
               </div>
               <div class="mt-4">
                 <button
-                  id="submit-form"
+                  id="submit-form-btn"
                   type="submit"
                   class="btn yc-btn d-block ml-auto font-weight-bold"
                 >
@@ -404,44 +419,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      function addLabelEventListeners(inputId) {
-        let nameInput = document.getElementById(inputId);
-        nameInput.addEventListener("focus", () => {
-          document
-            .getElementById(`${inputId}-label`)
-            .classList.add("is-active");
-        });
-        nameInput.addEventListener("blur", () => {
-          document
-            .getElementById(`${inputId}-label`)
-            .classList.remove("is-active");
-        });
-      }
-      addLabelEventListeners("name");
-      addLabelEventListeners("email");
-      addLabelEventListeners("message");
-
-      document
-        .getElementById("submit-form")
-        .addEventListener("click", event => {
-          event.preventDefault();
-          let contactFormURL =
-            "https://script.google.com/macros/s/AKfycbxZcgk6CzEu25whV64hQjp9AhnWOZEnKQ8iS00B0JYatAiSBOSTvOyNV6jHtvq405v0/exec";
-          let data = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").innerText
-          };
-          fetch(contactFormURL, {
-            method: "GET",
-            data: JSON.stringify(data)
-          })
-            .then(response => response.json())
-            .then(data => {
-              console.log(data);
-            });
-        });
-    </script>
+    <script src="./public/script.js"></script>
   </body>
 </html>
