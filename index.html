@@ -344,7 +344,13 @@
             <form id="contact-form">
               <div class="form-group mt-4">
                 <label for="name" id="name-label">Name</label>
-                <input type="text" class="yc-form-control" id="name" required />
+                <input
+                  type="text"
+                  class="yc-form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
               </div>
               <div class="form-group mt-4">
                 <label for="email" id="email-label">Email</label>
@@ -352,6 +358,7 @@
                   type="email"
                   class="yc-form-control"
                   id="email"
+                  name="email"
                   required
                 />
               </div>
@@ -364,10 +371,10 @@
                   tabindex="0"
                   spellcheck="false"
                   contenteditable="true"
-                  required
                 ></div>
                 <textarea
                   id="message-hidden-textarea"
+                  name="message"
                   style="
                     position: absolute;
                     bottom: 1px;
@@ -386,7 +393,7 @@
                 <button
                   id="submit-form-btn"
                   type="submit"
-                  class="btn yc-btn d-block ml-auto font-weight-bold"
+                  class="btn yc-form-btn d-block ml-auto font-weight-bold"
                 >
                   <i class="fa fa-paper-plane mr-1"></i>
                   Send
