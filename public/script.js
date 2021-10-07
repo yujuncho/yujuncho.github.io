@@ -31,32 +31,38 @@ addFocusEventsForMessage();
 
 // Handling form submission
 function postToGoogleSheets(data) {
+  let formIcon = document.getElementById("submit-form-icon");
+  formIcon.className = "fa fa-spinner fa-spin mr-1";
+
   let contactFormURL =
     "https://script.google.com/macros/s/AKfycbxCxAmU9dCcvSHDVJke5nEtHVqUtMMlLeeVLJu389yJ721kyKXTBmmcLcSVI-uEYVnp/exec";
+
   fetch(contactFormURL, {
     method: "POST",
     body: data
   })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       formPosted();
     })
     .catch(error => {
-      console.log(error);
       formPosted(error);
     });
 }
 
 function formPosted(error = null) {
-  if (error != null) {
+  let formIcon = document.getElementById("submit-form-icon");
+  formIcon.className = "fa fa-paper-plane mr-1";
+
+  let alert = document.getElementById("submit-form-alert");
+  let alertMessage = document.getElementById("submit-form-alert-message");
+
+  if (error !== null) {
+    alert.className = "alert alert-danger alert-dismissible fade show";
+    alertMessage.innerText = error;
   } else {
-    /*
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").innerText = "";
-    document.getElementById("message-hidden-textarea").value = "";
-    */
+    alert.className = "alert alert-success alert-dismissible fade show";
+    alertMessage.innerText = "Message sent successfully!";
   }
 }
 
@@ -76,3 +82,16 @@ function submitFormHandler(event) {
 document
   .getElementById("submit-form-btn")
   .addEventListener("click", submitFormHandler);
+
+// Handling closing the form's alert
+function closeAlertHandler(event) {
+  let alert = document.getElementById("submit-form-alert");
+  let alertMessage = document.getElementById("submit-form-alert-message");
+
+  alert.className = "d-none";
+  alertMessage.innerText = "";
+}
+
+document
+  .getElementById("submit-form-alert-close")
+  .addEventListener("click", closeAlertHandler);
