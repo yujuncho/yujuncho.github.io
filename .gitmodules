@@ -1,6 +1,0 @@
-[submodule "WeatherApp"]
-	path = projects/WeatherApp
-	url = https://github.com/yujuncho7/WeatherApp
-[submodule "QuizApp"]
-	path = projects/QuizApp
-	url = https://github.com/yujuncho7/QuizApp
