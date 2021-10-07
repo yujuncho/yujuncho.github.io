@@ -17,14 +17,11 @@
     <link href="./public/font-awesome/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./public/styles.css" />
   </head>
-  <body style="background-color: #fdfaf6; color: #171817; font-family: Karu">
+  <body class="yc-bg-light yc-text-dark yc-font-karu">
     <main>
       <!-- Nav -->
       <div class="container">
-        <nav
-          class="navbar navbar-expand-lg navbar-light px-0"
-          style="background-color: #fdfaf6"
-        >
+        <nav class="navbar navbar-expand-sm navbar-light px-0 yc-bg-light">
           <div class="container-fluid px-0">
             <a class="navbar-brand" href="#">
               <img
@@ -36,59 +33,40 @@
               />
             </a>
             <button
-              class="navbar-toggler"
+              class="navbar-toggler collapsed"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <i class="fa yc-toggler-icon"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#Projects"
-                    style="color: #171817 !important"
-                  >
+                  <a class="nav-link yc-text-dark" href="#Projects">
                     Projects
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#Experiences"
-                    style="color: #171817 !important"
-                  >
+                  <a class="nav-link yc-text-dark" href="#Experiences">
                     Experiences
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#About"
-                    style="color: #171817 !important"
-                  >
-                    About
-                  </a>
+                  <a class="nav-link yc-text-dark" href="#About"> About </a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="#Contact"
-                    style="color: #171817 !important"
-                  >
-                    Contact
-                  </a>
+                  <a class="nav-link yc-text-dark" href="#Contact"> Contact </a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
+
       <!-- Banner -->
       <section
         class="container"
@@ -96,45 +74,40 @@
       >
         <div class="row"></div>
         <div class="row">
-          <div class="col-5 offset-1">
+          <div class="col-md-6 col-lg-5 offset-md-1">
             <h1 class="font-weight-bold">Yujun Cho</h1>
             <p>
-              I'm a full-stack React and Node developer. I combine my
-              experiences with software development, design, and storytelling to
-              engineer with logic, curiosity, and empathy.
+              Full-stack web developer with experiences in
+              <br />
+              software development, design, and storytelling
             </p>
             <a
-              href="mailto:yujuncho7@gmail.com"
-              class="font-weight-bold mr-4"
-              style="color: #064420 !important"
+              href="mailto:helloyujuncho@gmail.com"
+              class="font-weight-bold mr-4 yc-text-primary d-inline-block"
             >
-              <i class="far fa-envelope mr-2"></i>yujuncho7@gmail.com
+              <i class="far fa-envelope mr-2" aria-hidden="true"></i
+              >helloyujuncho@gmail.com
             </a>
             <a
-              href="https://github.com/yujuncho7"
-              class="font-weight-bold"
-              style="color: #064420 !important"
+              href="https://github.com/yujuncho"
+              class="font-weight-bold yc-text-primary d-inline-block"
             >
-              <i class="fab fa-github mr-2" aria-hidden="true"></i>yujuncho7
+              <i class="fab fa-github mr-2" aria-hidden="true"></i>yujuncho
             </a>
           </div>
         </div>
       </section>
+
       <!-- Projects -->
-      <section id="Projects">
+      <section id="Projects" class="px-3 px-sm-0">
         <div class="d-flex justify-content-center">
           <h2 class="font-weight-bold">Projects</h2>
         </div>
-        <div
-          class="container rounded shadow mt-2"
-          style="
-            padding-top: 100px;
-            padding-bottom: 100px;
-            background-color: #faf1e6;
-          "
-        >
+        <div class="container rounded shadow mt-2 yc-bg-info py-5">
           <div class="row position-relative">
-            <div class="col-4 offset-1 d-flex align-items-center">
+            <div
+              class="col-sm-10 col-md-4 offset-sm-1 d-flex align-items-center"
+            >
               <svg
                 class="bd-placeholder-img bd-placeholder-img-lg card-img"
                 width="100%"
@@ -151,34 +124,39 @@
             </div>
             <div
               class="
-                col-5
-                offset-1
+                col-sm-10 col-md-5
+                offset-sm-1
+                mt-3 mt-md-0
                 d-flex
                 flex-column
                 justify-content-center
                 position-static
               "
             >
-              <h4 class="font-weight-bold">
+              <h4 class="font-weight-bold">iDoctor</h4>
+              <p>
+                IDoctor is a full-stack web app built with MongoDB, Express,
+                React, and Node.js. The goal of this demo app is to provide
+                hospital staff with a system for managing and tracking patient
+                information and visits. A few of the technological highlights
+                include Typescript, offline functionality, and JWT based
+                authentication.
+              </p>
+              <p>
                 <a
                   href="./projects/QuizApp/"
-                  class="stretched-link"
-                  style="color: #171817 !important"
+                  class="stretched-link yc-text-dark"
                   target="_blank"
                 >
-                  Quiz
+                  <i class="fas fa-arrow-right mr-2"></i>View iDoctor Web App
                 </a>
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Asperiores ipsa, iusto ut doloremque dolores, cumque dignissimos
-                quibusdam expedita nam inventore fuga vero itaque. Sequi unde
-                hic ut iste quo earum nesciunt? Commodi repellat cumque magnam
               </p>
             </div>
           </div>
           <div class="row position-relative mt-5">
-            <div class="col-4 offset-1 d-flex align-items-center">
+            <div
+              class="col-sm-10 col-md-4 offset-sm-1 d-flex align-items-center"
+            >
               <svg
                 class="bd-placeholder-img bd-placeholder-img-lg card-img"
                 width="100%"
@@ -195,86 +173,85 @@
             </div>
             <div
               class="
-                col-5
-                offset-1
+                col-sm-10 col-md-5
+                offset-sm-1
+                mt-3 mt-md-0
                 d-flex
                 flex-column
                 justify-content-center
                 position-static
               "
             >
-              <h4 class="font-weight-bold">
+              <h4 class="font-weight-bold">Employee Directory</h4>
+              <p>
+                Employee Directory is a front-end web app built with React and
+                Bootstrap. The goal of this demo app is to provide a table of
+                employees searchable by name, phone number, or email address.
+              </p>
+              <p>
                 <a
-                  href="./projects/WeatherApp/"
-                  class="stretched-link"
-                  style="color: #171817 !important"
+                  href="./projects/QuizApp/"
+                  class="stretched-link yc-text-dark"
                   target="_blank"
                 >
-                  Weather Search
+                  <i class="fas fa-arrow-right mr-2"></i>View Employee Directory
+                  Web App
                 </a>
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Asperiores ipsa, iusto ut doloremque dolores, cumque dignissimos
-                quibusdam expedita nam inventore fuga vero itaque. Sequi unde
-                hic ut iste quo earum nesciunt? Commodi repellat cumque magnam
               </p>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Experiences -->
       <section
         id="Experiences"
-        style="
-          margin-top: 100px;
-          padding-top: 100px;
-          padding-bottom: 100px;
-          background-color: #171817;
-          color: #fdfaf6;
-        "
+        class="yc-bg-dark yc-text-light"
+        style="margin-top: 100px; padding-top: 100px; padding-bottom: 100px"
       >
         <div class="container">
           <div class="row">
-            <div class="col-4 offset-2">
+            <div class="col-sm-7 col-md-5 col-lg-4 offset-sm-1 offset-lg-2">
               <h2 class="font-weight-bold">Experiences</h2>
               <p>
-                Starting off in software development, I spent the last few years
-                of my life navigating creative and people-centric jobs. These
-                experiences gave me the skills to navigate challenging
-                conversations, craft intentional solutions, and maintain
-                perspective during uncertainty. I recently returned to software
-                development now equipped to collaborate with people and solve
-                problems with my mind and heart.
+                I started my career in computer science and software
+                development, and I spent the last few years of my life in
+                creative and people-centric jobs. From my recent experiences, I
+                learned to navigate challenging conversations, craft intentional
+                solutions, and stay grounded during uncertainty. I've now
+                returned to software development ready to integrate my learnings
+                with my passion for technology and innovation.
+              </p>
+              <p>
+                <a
+                  href="/public/assets/2021_Resume_Yujun-Cho.pdf"
+                  class="my-1 my-sm-0 mr-4 yc-text-light d-inline-block"
+                >
+                  <i class="fas fa-arrow-right mr-2"></i>View Resume
+                </a>
               </p>
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col-7 offset-5">
+            <div class="col-8 col-sm-7 offset-4 offset-sm-5">
               <p class="mb-1">Apr 2021 - Present</p>
-              <h4 class="font-weight-bold">Software Developer Mentee</h4>
+              <h4 class="font-weight-bold">Self-study Web Developer</h4>
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col-7 offset-5">
+            <div class="col-8 col-sm-7 offset-4 offset-sm-5">
               <p class="mb-1">July 2019 - Oct 2020</p>
               <h4 class="font-weight-bold">Independent Filmmaker</h4>
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col-7 offset-5">
-              <p class="mb-1">Jan 2019 - Jun 2019</p>
-              <h4 class="font-weight-bold">Tako KBBQ - Restaurant Manager</h4>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-7 offset-5">
+            <div class="col-8 col-sm-7 offset-4 offset-sm-5">
               <p class="mb-1">Sep 2017 - Dec 2018</p>
               <h4 class="font-weight-bold">Independent UX Designer</h4>
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col-7 offset-5">
+            <div class="col-8 col-sm-7 offset-4 offset-sm-5">
               <p class="mb-1">Mar 2015 - May 2017</p>
               <h4 class="font-weight-bold">
                 Remeeting - Software Engineer & Product Manager
@@ -282,13 +259,13 @@
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col-7 offset-5">
+            <div class="col-8 col-sm-7 offset-4 offset-sm-5">
               <p class="mb-1">May 2014 - Aug 2014</p>
               <h4 class="font-weight-bold">OddLook - iOS App Developer</h4>
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col-7 offset-5">
+            <div class="col-8 col-sm-7 offset-4 offset-sm-5">
               <p class="mb-1">May 2013 - Nov 2013</p>
               <h4 class="font-weight-bold">
                 Puselocker - Software Engineer Intern
@@ -297,14 +274,16 @@
           </div>
         </div>
       </section>
+
       <!-- About -->
       <section id="About" class="container" style="padding-top: 100px">
         <div class="row">
-          <div class="col-4 offset-1 d-flex flex-column justify-content-center">
-            <h2 class="font-weight-bold">About</h2>
-            <p></p>
-          </div>
-          <div class="col-5 offset-1">
+          <div
+            class="
+              col-sm-10 col-md-5 col-lg-4
+              offset-sm-1 offset-md-0 offset-lg-1
+            "
+          >
             <svg
               class="bd-placeholder-img bd-placeholder-img-lg card-img"
               width="100%"
@@ -319,8 +298,25 @@
               <rect width="100%" height="100%" fill="#6c757d"></rect>
             </svg>
           </div>
+          <div class="col-sm-10 col-md-6 col-lg-5 offset-sm-1 mt-3 mt-md-0">
+            <h2 class="font-weight-bold">About</h2>
+            <p>
+              I'm a web developer in Sacramento, California with a
+              multi-disciplinary background. I believe one of the difference
+              between good and great programming is
+            </p>
+            <p>
+              In terms of the work you do, what aspects are you most passionate
+              about and why? I value learning
+            </p>
+            <p>
+              What do you consider some of your biggest professional and
+              personal accomplishments?
+            </p>
+          </div>
         </div>
       </section>
+
       <!-- Contact -->
       <section
         id="Contact"
@@ -328,17 +324,17 @@
         style="padding-top: 100px; padding-bottom: 100px"
       >
         <div class="row">
-          <div class="col-4 m-auto">
+          <div class="col-sm-10 col-md-5 col-lg-4 m-auto">
             <h2 class="font-weight-bold">Contact</h2>
             <p>
-              I'm currently available for full-time employment as a full-stack
-              web developer. Fill out the form, or if you prefer,
+              I'm currently available for full-time employment as a web
+              developer. If you'd like to connect, fill out the form or email me
+              at
               <a
-                href="mailto:yujuncho7@gmail.com"
-                class="font-weight-bold"
-                style="color: #064420 !important"
+                href="mailto:helloyujuncho@gmail.com"
+                class="font-weight-bold yc-text-primary"
               >
-                send me an email.
+                helloyujuncho@gmail.com
               </a>
             </p>
             <form id="contact-form">
@@ -362,7 +358,7 @@
                   required
                 />
               </div>
-              <div class="form-group mt-4" style="position: relative">
+              <div class="form-group mt-4 position-relative">
                 <label for="message" id="message-label">Message</label>
                 <div
                   role="textbox"
@@ -404,28 +400,39 @@
         </div>
       </section>
     </main>
-    <footer class="py-5 px-3" style="background-color: #e4efe7">
+    <footer class="py-4 py-sm-5 px-sm-3" style="background-color: #e4efe7">
       <div class="container">
-        <div class="d-flex justify-content-between">
-          <div>&copy; 2021 Yujun Cho</div>
-          <div>
+        <div class="d-flex flex-wrap-reverse justify-content-between">
+          <div class="my-3 my-sm-0 mr-5">
+            <p class="my-1 my-sm-0">&copy; 2021 Yujun Cho</p>
+          </div>
+          <div class="my-3 my-sm-0">
             <a
-              href="mailto:yujuncho7@gmail.com"
-              class="mr-4"
-              style="color: #171817 !important"
+              href="mailto:helloyujuncho@gmail.com"
+              class="my-1 my-sm-0 mr-4 yc-text-dark d-inline-block"
             >
-              <i class="far fa-envelope mr-2"></i>yujuncho7@gmail.com
+              <i class="far fa-envelope mr-2"></i>helloyujuncho@gmail.com
             </a>
             <a
-              href="https://github.com/yujuncho7"
-              style="color: #171817 !important"
+              href="https://github.com/yujuncho"
+              class="my-1 my-sm-0 yc-text-dark d-inline-block"
             >
-              <i class="fab fa-github mr-2" aria-hidden="true"></i>yujuncho7
+              <i class="fab fa-github mr-2" aria-hidden="true"></i>yujuncho
             </a>
           </div>
         </div>
       </div>
     </footer>
     <script src="./public/script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
